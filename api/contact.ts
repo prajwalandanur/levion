@@ -10,9 +10,9 @@ export default async function handler(req: any, res: any) {
   try {
     const { name, email, message } = req.body;
 
-    await resend.emails.send({
-      from: "onboarding@resend.dev",   // keep this for now
-      to: "prajwalaiet@gmail.com",     // ✅ YOUR EMAIL (done)
+    const response = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: ["prajwalaiet@gmail.com"], // ✅ use array
       subject: `New message from ${name}`,
       html: `
         <h2>New Contact Form Message</h2>
@@ -22,9 +22,12 @@ export default async function handler(req: any, res: any) {
       `,
     });
 
+    console.log("RESEND RESPONSE:", response); // 🔥 IMPORTANT
+
     return res.status(200).json({ success: true });
 
   } catch (error) {
+    console.error("RESEND ERROR:", error); // 🔥 IMPORTANT
     return res.status(500).json({ error: "Email failed" });
   }
 }
