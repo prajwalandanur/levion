@@ -1,5 +1,6 @@
 import React from 'react';
-import exploreSolutions from '@/assets/explore-solutions.png';
+import { useNavigate } from "react-router-dom";
+
 import vectorArrow from '@/assets/vector-arrow.png';
 import webTechIllustration from '@/assets/web-tech-illustration.png';
 import innovationIllustration from '@/assets/innovation-strategy-illustration.png';
@@ -85,6 +86,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   servicesList,
   layout,
 }) => {
+  const navigate = useNavigate(); // ✅ added
   const isImageLeft = layout === 'image-left';
 
   return (
@@ -94,6 +96,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       {/* Top section */}
       <div className="flex flex-col md:flex-row items-center md:items-start px-6 md:px-12 pt-8 md:pt-10 gap-4 md:gap-8">
+        
         {/* Illustration */}
         <div
           className={`w-full md:w-[38%] flex justify-center shrink-0 ${
@@ -108,7 +111,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           />
         </div>
 
-        {/* Text Content */}
+        {/* Text */}
         <div
           className={`w-full md:w-[62%] text-center md:text-left md:pt-2 ${
             isImageLeft ? 'md:order-2' : 'md:order-1'
@@ -152,9 +155,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
       </div>
 
-      {/* CTA Button */}
+      {/* CTA */}
       <div className="flex justify-center px-6 md:px-12 pt-4 pb-8 md:pb-10">
         <button
+          onClick={() => navigate("/contact")} // ✅ routing added
           className="px-10 md:px-12 py-3 md:py-3.5 rounded-lg border-2 border-black bg-white text-black font-bold text-sm md:text-base transition-transform hover:scale-105 active:scale-95"
           style={{ fontFamily: "'Slackey', cursive" }}
         >
@@ -167,31 +171,44 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
 const ExploreSolutionsSection: React.FC = () => {
   return (
-    <section
-      className="relative w-full py-8 md:py-12 overflow-hidden"
-      
-    >
-      {/* Explore Solutions Heading */}
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative flex justify-center">
+    <section className="relative w-full py-8 md:py-12 overflow-hidden">
+
+      {/* Heading + Arrow */}
+      <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative flex justify-center mb-16 md:mb-24 lg:mb-32">
+
         <div className="relative inline-flex items-start">
-          <img
-            src={exploreSolutions}
-            alt="Explore Solutions"
-            className="w-[220px] md:w-[420px] h-auto select-none"
-            draggable={false}
-          />
+          
+          <div className="flex flex-col items-center leading-none">
+            <h2
+              className="text-[2.2rem] md:text-[4rem] lg:text-[5rem]"
+              style={{ fontFamily: "'Slackey', cursive", color: '#000' }}
+            >
+              EXPLORE
+            </h2>
+
+            <h2
+              className="text-[2.4rem] md:text-[4.5rem] lg:text-[5.5rem] mt-2 md:mt-3"
+              style={{ fontFamily: "'Slackey', cursive", color: '#FEC107' }}
+            >
+              SOLUTIONS
+            </h2>
+          </div>
+
+          {/* Arrow beside SOLUTIONS */}
           <img
             src={vectorArrow}
             alt=""
-            className="absolute -right-[50px] md:-right-[100px] top-1 md:top-2 w-[40px] md:w-[90px] h-auto select-none animate-float"
+            className="absolute left-full top-[65%] -translate-y-1/2 ml-2 md:ml-4 w-[40px] md:w-[90px] animate-float"
             draggable={false}
             style={{ filter: 'drop-shadow(2px 4px 6px rgba(0,0,0,0.10))' }}
           />
         </div>
+
       </div>
 
-      {/* Web & Tech Systems Card */}
-      <div className="max-w-[1280px] mx-auto px-4 md:px-12 mt-8 md:mt-14">
+      {/* Cards */}
+      <div className="max-w-[1280px] mx-auto px-4 md:px-12 space-y-10 md:space-y-16">
+
         <ServiceCard
           label="Web & Tech Systems"
           heading={<>Effective Digital<br />Solutions</>}
@@ -201,47 +218,40 @@ const ExploreSolutionsSection: React.FC = () => {
           servicesList={services}
           layout="image-left"
         />
-      </div>
 
-      {/* Innovation & Strategy Card */}
-      <div className="max-w-[1280px] mx-auto px-4 md:px-12 mt-10 md:mt-16">
         <ServiceCard
           label="Innovation & Strategy"
           heading={<>Create.<br />Execute.<br />Thrive.</>}
-          description="Accelerate your growth with data-driven strategies. Stay ahead of the competition, move past the risk of stagnation, and build a path toward sustained, long-term success."
+          description="Accelerate your growth with data-driven strategies. Stay ahead of the competition and build long-term success."
           illustration={innovationIllustration}
           illustrationAlt="Innovation & Strategy illustration"
           servicesList={innovationServices}
           layout="image-right"
         />
-      </div>
 
-      {/* Branding & Engagement Card */}
-      <div className="max-w-[1280px] mx-auto px-4 md:px-12 mt-10 md:mt-16">
         <ServiceCard
-          label="Innovation & Strategy"
+          label="Branding & Engagement"
           heading={<>Elevate Your<br />Reach.</>}
-          description="Create a distinct brand identity that connects with your audience. Elevate your branding and leave a lasting impression that keeps your customers coming back."
+          description="Create a distinct brand identity that connects with your audience and leaves a lasting impression."
           illustration={brandingIllustration}
           illustrationAlt="Branding & Engagement illustration"
           servicesList={brandingServices}
           layout="image-left"
         />
-      </div>
 
-      {/* Marketing & Advertising Card */}
-      <div className="max-w-[1280px] mx-auto px-4 md:px-12 mt-10 md:mt-16">
         <ServiceCard
           label="Marketing & Advertising"
           heading={<>Creativity<br />That Sells.</>}
-          description="Grow your business with performance-driven digital marketing. Our expertise in SEO, Google Meta Ads, and AI-powered content helps brands reach the right customers and scale faster online."
+          description="Grow your business with performance-driven marketing using SEO, ads, and AI-powered content."
           illustration={marketingIllustration}
           illustrationAlt="Marketing & Advertising illustration"
           servicesList={marketingServices}
           layout="image-right"
         />
+
       </div>
 
+      {/* Animation */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0); }
@@ -251,6 +261,7 @@ const ExploreSolutionsSection: React.FC = () => {
           animation: float 3s ease-in-out infinite;
         }
       `}</style>
+
     </section>
   );
 };

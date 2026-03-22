@@ -6,10 +6,7 @@ import ContactFormSection from "@/components/ContactFormSection";
 
 const ClientVoicesSection = () => {
   return (
-    <section
-      className="relative py-20 md:py-28 lg:py-32 overflow-hidden"
-      
-    >
+    <section className="relative pt-6 pb-20 md:pt-10 md:pb-24 lg:pt-12 lg:pb-28 overflow-hidden">
       <div className="relative z-10">
         <h2 className="text-center font-[Slackey] uppercase text-[36px] md:text-[64px] lg:text-[80px] leading-tight mb-16 md:mb-20 px-4">
           <span className="text-foreground">CLIENT </span>

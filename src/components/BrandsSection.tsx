@@ -15,14 +15,12 @@ const logos = [
 
 export default function BrandsSection() {
   return (
-    <section
-      className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+    <section className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat">
       
-    >
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 sm:px-10 sm:py-20 md:px-20">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pt-12 pb-4 sm:px-10 sm:pt-16 sm:pb-6 md:px-20">
         
         {/* Heading */}
-        <div className="mb-10 text-center sm:mb-16 md:mb-20">
+        <div className="mb-6 sm:mb-8 md:mb-10 text-center">
           <h2
             className="uppercase text-[32px] md:text-[52px] lg:text-[64px] xl:text-[72px]"
             style={{
@@ -38,9 +36,9 @@ export default function BrandsSection() {
         </div>
 
         {/* Logo container */}
-        <div className="relative mx-auto w-full max-w-[900px]">
+        <div className="relative mx-auto w-full max-w-[1200px]">
           
-          <div className="relative overflow-hidden px-10 md:px-14 py-6 md:py-8 h-[168px] md:h-[202px] lg:h-[235px] flex items-center">
+          <div className="relative overflow-hidden px-12 md:px-20 py-10 md:py-12 h-[200px] md:h-[260px] lg:h-[320px] flex items-center">
             
             {/* Frame */}
             <img
@@ -60,7 +58,7 @@ export default function BrandsSection() {
                     key={`a-${i}`}
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-[40px] md:h-[50px] lg:h-[60px] w-auto object-contain"
+                    className="h-[50px] md:h-[70px] lg:h-[90px] w-auto object-contain"
                   />
                 ))}
 
@@ -70,7 +68,7 @@ export default function BrandsSection() {
                     key={`b-${i}`}
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-[40px] md:h-[50px] lg:h-[60px] w-auto object-contain"
+                    className="h-[50px] md:h-[70px] lg:h-[90px] w-auto object-contain"
                   />
                 ))}
 

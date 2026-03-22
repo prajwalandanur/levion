@@ -42,26 +42,31 @@ const NewPage = () => {
       className="min-h-screen">
       
       
-      {/* Our Story Section */}
-      <section className="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-20 max-w-4xl mx-auto text-center">
-        <h2 className="font-[Slackey] uppercase text-[36px] md:text-[56px] lg:text-[72px] leading-tight mb-8 md:mb-12">
-          <span className="text-foreground text-6xl">OUR </span>
-          <span className="text-[hsl(var(--testimonial-yellow))] text-6xl">STORY</span>
-        </h2>
-        <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed">
-          Levion Studio is a strategy-led digital studio focused on designing and
-          building meaningful digital experiences. We work with businesses to
-          transform ideas into thoughtful products, platforms, and brands that
-          grow with purpose.
-        </p>
-      </section>
+      <section className="py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-20 w-full text-center">
+  
+      <h2 className="font-[Slackey] uppercase text-[42px] md:text-[68px] lg:text-[86px] leading-tight mb-8 md:mb-12">
+  <span className="text-foreground">OUR </span>
+  <span className="text-[hsl(var(--testimonial-yellow))]">STORY</span>
+</h2>
+
+  {/* 🔥 PARAGRAPH CONTAINER FIX */}
+  <div className="w-full md:max-w-[70%] mx-auto">
+    <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed">
+      Levion Studio is a strategy-led digital studio focused on designing and
+      building meaningful digital experiences. We work with businesses to
+      transform ideas into thoughtful products, platforms, and brands that
+      grow with purpose.
+    </p>
+  </div>
+
+</section>
 
       {/* The People Section */}
       <section className="pb-20 md:pb-28 lg:pb-32 px-6 md:px-12 lg:px-20">
-        <h2 className="text-center font-[Slackey] uppercase text-[36px] md:text-[56px] lg:text-[72px] leading-tight mb-16 md:mb-20">
-          <span className="text-foreground text-6xl">THE </span>
-          <span className="text-[hsl(var(--testimonial-yellow))] text-6xl">PEOPLE</span>
-        </h2>
+      <h2 className="text-center font-[Slackey] uppercase text-[42px] md:text-[68px] lg:text-[86px] leading-tight mb-16 md:mb-20">
+  <span className="text-foreground">THE </span>
+  <span className="text-[hsl(var(--testimonial-yellow))]">PEOPLE</span>
+</h2>
 
         <div className="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-10 lg:gap-14 max-w-5xl mx-auto">
           {teamMembers.map((member) =>
@@ -101,10 +106,10 @@ const NewPage = () => {
 
       {/* Our Vision Section */}
       <section className="pb-20 md:pb-28 lg:pb-32 px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
-        <h2 className="text-center font-[Slackey] uppercase text-[36px] md:text-[56px] lg:text-[72px] leading-tight mb-8 md:mb-12">
-          <span className="text-foreground text-6xl">OUR </span>
-          <span className="text-[hsl(var(--testimonial-yellow))] text-6xl">VISION</span>
-        </h2>
+      <h2 className="text-center font-[Slackey] uppercase text-[42px] md:text-[68px] lg:text-[86px] leading-tight mb-8 md:mb-12">
+  <span className="text-foreground">OUR </span>
+  <span className="text-[hsl(var(--testimonial-yellow))]">VISION</span>
+</h2>
         <div className="space-y-6 text-left">
           <p className="font-['Satoshi_Variable'] text-foreground text-[15px] lg:text-[20px] leading-relaxed font-semibold text-left md:text-base">
             We envision a future where businesses grow with purpose and contribute meaningfully to the world around them. At Levion Studio, we collaborate with brands that believe in building something valuable not just for themselves, but for the communities they serve.
@@ -120,11 +125,11 @@ const NewPage = () => {
 
       {/* Our Mission Section */}
       <section className="pb-20 md:pb-28 lg:pb-32 px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
-        <h2 className="text-center font-[Slackey] uppercase text-[36px] md:text-[56px] lg:text-[72px] leading-tight mb-8 md:mb-12">
-          <span className="text-foreground">OUR </span>
-          <span className="text-[hsl(var(--testimonial-yellow))]">MISSION</span>
-        </h2>
-        <div className="space-y-6 text-left">
+        <h2 className="text-center font-[Slackey] uppercase text-[42px] md:text-[68px] lg:text-[86px] leading-tight mb-8 md:mb-12">
+  <span className="text-foreground">OUR </span>
+  <span className="text-[hsl(var(--testimonial-yellow))]">MISSION</span>
+</h2>
+        <div className="space-y-8 text-left">
           <p className="font-['Satoshi_Variable'] text-foreground text-[15px] lg:text-[20px] leading-relaxed font-semibold md:text-base">
             Our mission is to help businesses transform their ideas into thoughtful digital products, brands, and platforms that create lasting value.
           </p>

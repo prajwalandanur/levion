@@ -38,7 +38,6 @@ const GoldBoxSVG = () => (
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="none"
   >
-    {/* Yellow fill — slightly wobbly rectangle */}
     <path
       d={`
         M 18,8
@@ -54,7 +53,6 @@ const GoldBoxSVG = () => (
       fill="transparent"
       transform="rotate(-0.2, 400, 35)"
     />
-    {/* Outer gold stroke — hand-drawn double-line effect */}
     <path
       d={`
         M 22,10
@@ -76,7 +74,6 @@ const GoldBoxSVG = () => (
       strokeLinecap="round"
       vectorEffect="non-scaling-stroke"
     />
-    {/* Inner gold stroke — offset for sketch feel */}
     <path
       d={`
         M 26,13
@@ -118,15 +115,17 @@ const FAQItem = ({
       onClick={onToggle}
       className="w-full text-left group transition-transform duration-200 active:scale-[0.98]"
     >
-      <div className="relative flex items-center justify-between gap-3 md:gap-4 py-3 px-5 md:py-4 md:px-7 transition-all duration-200 group-hover:scale-[1.01]">
+      <div className="relative flex items-center justify-between gap-3 md:gap-5 py-4 px-6 md:py-6 md:px-10 transition-all duration-200 group-hover:scale-[1.01]">
         <GoldBoxSVG />
-        <span className="relative z-10 font-[Satoshi] font-semibold text-foreground text-[14px] md:text-[17px] lg:text-[19px] leading-snug">
+
+        <span className="relative z-10 font-[Satoshi] font-semibold text-foreground text-[15px] md:text-[20px] lg:text-[22px] leading-snug">
           {question}
         </span>
+
         <img
           src={arrowDown}
           alt=""
-          className="relative z-10 w-6 h-6 md:w-7 md:h-7 shrink-0 transition-transform duration-300 ease-out"
+          className="relative z-10 w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 shrink-0 transition-transform duration-300 ease-out"
           style={{
             transform: isOpen ? "rotate(0deg)" : "rotate(-90deg)",
           }}
@@ -141,7 +140,7 @@ const FAQItem = ({
         opacity: isOpen ? 1 : 0,
       }}
     >
-      <p className="font-[Satoshi] font-bold text-foreground text-[13px] md:text-[15px] lg:text-[17px] leading-relaxed px-5 md:px-7 pt-3 pb-5">
+      <p className="font-[Satoshi] font-bold text-foreground text-[14px] md:text-[17px] lg:text-[19px] leading-relaxed px-6 md:px-10 pt-3 pb-5">
         {answer}
       </p>
     </div>
@@ -152,7 +151,8 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="mt-8 md:mt-12 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mt-8 md:mt-12 w-full md:max-w-[70%] mx-auto px-4 sm:px-6 lg:px-0">
+      
       <h2
         className="text-center font-[Slackey] uppercase text-[36px] md:text-[64px] lg:text-[80px] mb-12 md:mb-16"
         style={{ lineHeight: 1.1 }}

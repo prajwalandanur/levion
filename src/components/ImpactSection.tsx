@@ -6,15 +6,17 @@ interface StatItemProps {
 
 const StatItem = ({ value, label }: StatItemProps) => {
   return (
-    <div className="flex min-h-[100px] cursor-pointer items-center justify-center px-4 py-2 text-center md:min-h-[140px] md:px-6 md:py-3 lg:min-h-[160px]">
+    <div className="flex min-h-[100px] items-center justify-center px-4 py-2 text-center md:min-h-[140px] md:px-6 md:py-3 lg:min-h-[160px]">
       
-      <div className="flex flex-col items-center justify-center gap-1 md:gap-2 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-lg">
+      <div className="flex flex-col items-center justify-center gap-1 md:gap-2 rounded-xl px-4 py-3">
         
-        <span className="whitespace-nowrap font-['Slackey'] text-[23px] leading-none text-impact-yellow md:text-[36px] lg:text-5xl xl:text-[51px]">
+        {/* VALUE (hover only here ✅) */}
+        <span className="whitespace-nowrap font-['Slackey'] text-[23px] leading-none text-impact-yellow md:text-[36px] lg:text-5xl xl:text-[51px] transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:drop-shadow-lg cursor-pointer">
           {value}
         </span>
 
-        <span className="mx-auto max-w-[14ch] font-['Satoshi'] text-[11px] uppercase tracking-wide text-impact-dark md:text-[12px] lg:text-base font-semibold text-center">
+        {/* LABEL (fixed font ✅) */}
+        <span className="mx-auto max-w-[20ch] font-['Satoshi Variable'] text-[11px] uppercase tracking-wide text-impact-dark md:text-[12px] lg:text-base font-semibold text-center">
           {label}
         </span>
 
@@ -24,18 +26,16 @@ const StatItem = ({ value, label }: StatItemProps) => {
 };
 
 const stats = [
-  { value: "120%+", label: <>Average Client<br />Growth</> },
+  { value: "120%+", label: <>Average Client <br />Growth</> },
   { value: "2M+", label: <>Audience<br />Reached</> },
-  { value: "40+", label: <>Projects<br />Delivered</> },
+  { value: "20+", label: <>Projects<br />Delivered</> },
   { value: "5+", label: <>Years<br />Experience</> },
 ];
 
 export default function ImpactSection() {
   return (
-    <section
-      className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-    
-    >
+    <section className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+      
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 sm:px-10 sm:py-20 md:px-20">
         
         {/* Heading */}
@@ -63,9 +63,9 @@ export default function ImpactSection() {
             <p
               className="text-impact-dark leading-snug"
               style={{
-                fontFamily: "'Satoshi', sans-serif",
-                fontSize: "clamp(16px, 3vw, 27px)",
-                fontWeight: 500,
+                fontFamily: "'Satoshi Variable', sans-serif", // ✅ fixed
+                fontSize: "clamp(18px, 3vw, 30px)", // ✅ increased
+                fontWeight: 600, // ✅ semi-bold
               }}
             >
               We believe great work comes from care, creativity, and attention to detail.
@@ -74,9 +74,9 @@ export default function ImpactSection() {
             <p
               className="text-impact-body leading-snug"
               style={{
-                fontFamily: "'Satoshi', sans-serif",
-                fontSize: "clamp(16px, 3vw, 27px)",
-                fontWeight: 500,
+                fontFamily: "'Satoshi Variable', sans-serif", // ✅ fixed
+                fontSize: "clamp(18px, 3vw, 30px)", // ✅ increased
+                fontWeight: 600, // ✅ semi-bold
               }}
             >
               Every project we take on is crafted with the same focus and dedication to deliver work that truly stands out.
