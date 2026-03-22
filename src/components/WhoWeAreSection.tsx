@@ -8,34 +8,41 @@ const WhoWeAreSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative w-full overflow-hidden py-16 md:py-24">
-      <div className="mx-auto flex max-w-[1280px] flex-col items-start gap-8 px-6 md:flex-row md:items-center md:gap-12 md:px-8">
+    // ✅ FIX 1 & 3: Reduce top & bottom spacing (mobile optimized)
+    <section className="relative w-full overflow-hidden py-10 md:py-20">
+      
+      {/* ✅ FIX 2: Center everything properly */}
+      <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-6 px-6 text-center md:flex-row md:items-center md:gap-12 md:px-8 md:text-left">
 
         {/* Left text column */}
-        <div className="flex w-full flex-col items-start gap-5 md:w-[60%]">
+        <div className="flex w-full flex-col items-center gap-4 md:w-[60%] md:items-start">
           
           {/* Heading */}
-          <h2 className="font-[Slackey] uppercase leading-[0.95] flex items-center gap-4 md:gap-6 lg:gap-8">
-            <span className="text-[#FEC107] text-[36px] md:text-[56px] lg:text-[72px]">
-              WHO
-            </span>
-            <span className="text-foreground text-[36px] md:text-[56px] lg:text-[72px]">
-              WE
-            </span>
-            <span className="text-foreground text-[36px] md:text-[56px] lg:text-[72px]">
-              ARE
-            </span>
-          </h2>
+          <h2 className="font-[Slackey] uppercase leading-[1.05] flex flex-wrap justify-center gap-4 md:justify-start md:gap-8 lg:gap-12">
+  
+  <span className="text-[#FEC107] text-[40px] md:text-[64px] lg:text-[80px]">
+    WHO
+  </span>
+
+  <span className="text-foreground text-[40px] md:text-[64px] lg:text-[80px]">
+    WE
+  </span>
+
+  <span className="text-foreground text-[40px] md:text-[64px] lg:text-[80px]">
+    ARE
+  </span>
+
+</h2>
 
           {/* Description */}
-          <p className="font-body text-[18px] font-medium leading-[140%] tracking-[0.02em] text-foreground md:text-[20px]">
+          <p className="font-body text-[16px] font-medium leading-[140%] tracking-[0.02em] text-foreground md:text-[20px]">
             Levion Studio is a digital studio specializing in branding, software
             development, and growth systems.
           </p>
 
           {/* Bold statement */}
           <div className="relative inline-block">
-            <p className="font-body text-[16px] font-bold leading-[140%] tracking-[0.02em] text-foreground md:text-[20px]">
+            <p className="font-body text-[15px] font-bold leading-[140%] tracking-[0.02em] text-foreground md:text-[20px]">
               We help businesses turn ideas into powerful digital experiences that drive{" "}
               
               <span className="relative inline-block">
@@ -43,7 +50,7 @@ const WhoWeAreSection = () => {
                 <img
                   src={goldScribble}
                   alt=""
-                  className="pointer-events-none absolute left-0 top-full mt-1 w-[150px] md:w-[180px]"
+                  className="pointer-events-none absolute left-1/2 top-full mt-1 w-[120px] -translate-x-1/2 md:left-0 md:translate-x-0 md:w-[180px]"
                 />
               </span>
               
@@ -56,12 +63,12 @@ const WhoWeAreSection = () => {
             <img
               src={illustration}
               alt="Digital marketing illustration"
-              className="h-auto w-full max-w-[280px]"
+              className="h-auto w-full max-w-[240px]"
             />
           </div>
 
-          {/* CTA → ROUTED */}
-          <div className="mt-4">
+          {/* CTA */}
+          <div className="mt-2">
             <button
               onClick={() => navigate("/contact")}
               className="inline-block transition-transform duration-300 hover:scale-105"
@@ -69,7 +76,7 @@ const WhoWeAreSection = () => {
               <img
                 src={scheduleBtn}
                 alt="Schedule Free Consultation"
-                className="h-auto w-[260px] md:w-[360px]"
+                className="h-auto w-[220px] md:w-[360px]"
               />
             </button>
           </div>
@@ -81,7 +88,7 @@ const WhoWeAreSection = () => {
           <img
             src={illustration}
             alt="Digital marketing illustration"
-            className="h-auto w-full max-w-[360px]"
+            className="h-auto w-full max-w-[320px]"
           />
         </div>
 

@@ -13,10 +13,11 @@ const navItems = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false); // ✅ NEW
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // ✅ SCROLL DETECTION
+  // ✅ Scroll detection
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -25,6 +26,13 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // ✅ FIX: Reset header + scroll on navigation
+  useEffect(() => {
+    setMobileOpen(false);      // close mobile menu
+    setScrolled(false);        // reset header state
+    window.scrollTo(0, 0);     // go to top
+  }, [location.pathname]);
 
   return (
     <header
@@ -67,7 +75,7 @@ const Header = () => {
       {mobileOpen && (
         <nav className="flex flex-col items-center gap-4 border-t border-white/10 bg-white/5 backdrop-blur-sm px-4 pb-6 pt-4 md:hidden">
           {navItems.map((item) => (
-            <NavItem key={item.label} item={item} />
+            <NavItem key={item.label} item={item} setMobileOpen={setMobileOpen} />
           ))}
         </nav>
       )}
@@ -75,11 +83,14 @@ const Header = () => {
   );
 };
 
-const NavItem = ({ item }: any) => {
+const NavItem = ({ item, setMobileOpen }: any) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleClick = () => {
+    // ✅ Close mobile menu immediately
+    if (setMobileOpen) setMobileOpen(false);
+
     if (item.type === "route") {
       navigate(item.path);
     } else {

@@ -10,7 +10,8 @@ import paperTexture from "@/assets/paper-texture.png";
 const FooterSection = () => {
   return (
     <footer
-      className="relative pt-6 pb-8 md:pb-10 overflow-hidden"
+      // ✅ FIX 1: Reduced padding (mobile first)
+      className="relative pt-4 pb-6 md:pt-6 md:pb-10 overflow-hidden"
       style={{
         backgroundImage: `url(${paperTexture})`,
         backgroundSize: "cover",
@@ -19,76 +20,76 @@ const FooterSection = () => {
     >
       
       {/* Divider */}
-      <div className="w-full mb-8 md:mb-10">
+      <div className="w-full mb-6 md:mb-10">
         <div className="w-full border-t-[2px] border-[#FEC107]"></div>
-        <div className="w-full border-t-[2px] border-[#FEC107] mt-[5px]"></div>
+        <div className="w-full border-t-[2px] border-[#FEC107] mt-[4px]"></div>
       </div>
 
-      {/* 🔥 FULL WIDTH PUSHED LAYOUT */}
-      <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-20">
+      {/* Container */}
+      <div className="w-full px-5 sm:px-8 lg:px-16 xl:px-20">
         
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
 
           {/* LEFT */}
-          <div className="flex flex-col gap-5 max-w-[500px]">
+          <div className="flex flex-col gap-4 max-w-[500px]">
             
-            {/* Logo (bigger) */}
+            {/* Logo (slightly smaller on mobile) */}
             <img
               src={levionLogo}
               alt="Levion Studio"
-              className="w-[220px] sm:w-[260px] md:w-[280px]"
+              className="w-[180px] sm:w-[220px] md:w-[260px]"
             />
 
             {/* Description */}
-            <p className="font-[Satoshi] font-medium text-[16px] md:text-[18px] leading-[1.6] text-foreground/80">
+            <p className="font-[Satoshi] font-medium text-[14px] md:text-[17px] leading-[1.5] text-foreground/80">
               Levion Studio is a modern digital studio blending strategy, design, and technology to build brands that move forward.
             </p>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-2">
-              <img src={iconInstagram} className="w-16 h-16 md:w-18 md:h-18" />
-              <img src={iconLinkedin} className="w-16 h-16 md:w-18 md:h-18" />
-              <img src={iconFacebook} className="w-[60px] h-[60px] md:w-[75px] md:h-[75px]" />
+            {/* Social Icons (reduced size) */}
+            <div className="flex items-center gap-2 mt-1">
+              <img src={iconInstagram} className="w-10 h-10 md:w-14 md:h-14" />
+              <img src={iconLinkedin} className="w-10 h-10 md:w-14 md:h-14" />
+              <img src={iconFacebook} className="w-9 h-9 md:w-[65px] md:h-[65px]" />
             </div>
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col gap-5 text-left md:text-right">
+          <div className="flex flex-col gap-4 text-left md:text-right w-full md:w-auto">
             
             {/* Heading */}
             <div>
-              <h3 className="font-[Slackey] text-[28px] md:text-[36px]">
+              <h3 className="font-[Slackey] text-[22px] md:text-[34px]">
                 LET'S TALK
               </h3>
               <img
                 src={yellowScribble}
                 alt=""
-                className="w-[220px] md:w-[260px] mt-1 ml-auto"
+                className="w-[160px] md:w-[240px] mt-1 md:ml-auto"
               />
             </div>
 
             {/* Phone */}
-            <div className="flex items-center gap-3 md:justify-end">
-              <img src={iconPhone} className="w-8 h-8 md:w-10 md:h-10" />
-              <span className="font-[Satoshi] font-semibold text-[17px] md:text-[20px]">
+            <div className="flex items-center gap-2 md:justify-end">
+              <img src={iconPhone} className="w-6 h-6 md:w-9 md:h-9" />
+              <span className="font-[Satoshi] font-semibold text-[14px] md:text-[18px]">
                 +91 83100 29635, +91 98801 01775
               </span>
             </div>
 
             {/* Email */}
-            <div className="flex items-center gap-3 md:justify-end">
-              <img src={iconEmail} className="w-9 h-9 md:w-11 md:h-11" />
-              <span className="font-[Satoshi] font-semibold text-[17px] md:text-[20px]">
+            <div className="flex items-center gap-2 md:justify-end">
+              <img src={iconEmail} className="w-6 h-6 md:w-10 md:h-10" />
+              <span className="font-[Satoshi] font-semibold text-[14px] md:text-[18px]">
                 contact@levionstudio.com
               </span>
             </div>
 
             {/* Footer text */}
-            <div className="mt-2 flex flex-col gap-1 md:items-end">
-              <a className="font-[Satoshi] font-bold text-[15px] md:text-[17px] hover:underline">
+            <div className="mt-1 flex flex-col gap-1 md:items-end">
+              <a className="font-[Satoshi] font-bold text-[13px] md:text-[16px] hover:underline">
                 Privacy Policy
               </a>
-              <p className="font-[Satoshi] text-[13px] md:text-[15px] text-foreground/80">
+              <p className="font-[Satoshi] text-[12px] md:text-[14px] text-foreground/80">
                 © 2026 All Rights Reserved by Levion Studio.
               </p>
             </div>
