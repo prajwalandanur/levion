@@ -1,14 +1,12 @@
-import paybazaar from "@/assets/paybazaar.png";
 import southCanara from "@/assets/south-canara.png";
 import snackshack from "@/assets/snackshack.png";
 import gvInfotech from "@/assets/gv-infotech.png";
-import eddooswipe from "@/assets/eddooswipe.png";
+import ealert from "@/assets/ealert.png"; // ✅ new import
 import frameBorder from "@/assets/frame-border.png";
 
 const logos = [
   { src: southCanara, alt: "South Canara Agro Mart" },
-  { src: paybazaar, alt: "Paybazaar" },
-  { src: eddooswipe, alt: "Eddooswipe" },
+  { src: ealert, alt: "Ealert" }, // ✅ added here
   { src: gvInfotech, alt: "GV InfoTech" },
   { src: snackshack, alt: "SnackShack" },
 ];

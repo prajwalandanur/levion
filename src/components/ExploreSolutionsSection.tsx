@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import vectorArrow from '@/assets/vector-arrow.png';
 import webTechIllustration from '@/assets/web-tech-illustration.png';
-import innovationIllustration from '@/assets/innovation-strategy-illustration.png';
-import brandingIllustration from '@/assets/branding-illustration.png';
+
 import marketingIllustration from '@/assets/marketing-illustration.png';
 
 const services = {
@@ -22,35 +21,6 @@ const services = {
   ],
 };
 
-const innovationServices = {
-  left: [
-    'Business Model Innovation',
-    'Product Market Fit Strategy',
-    'Consumer & Market Research',
-    'Systems & Process Management',
-  ],
-  right: [
-    'Competitive & Stakeholder Analysis',
-    'Roadmap & Go-to-Market Strategy',
-    'MVP Planning & Product Strategy',
-    'Customer Acquisition Strategy',
-  ],
-};
-
-const brandingServices = {
-  left: [
-    'Brand Identity & Design',
-    'Brand Strategy & Positioning',
-    'Content Strategy & Planning',
-    'Social Media Content Calendar',
-  ],
-  right: [
-    'Online Reputation Management',
-    'Brand Launch & Campaign Activation',
-    'Event Marketing & Management',
-    'Demand Generation & Growth Strategy',
-  ],
-};
 
 const marketingServices = {
   left: [
@@ -219,25 +189,9 @@ const ExploreSolutionsSection: React.FC = () => {
           layout="image-left"
         />
 
-        <ServiceCard
-          label="Innovation & Strategy"
-          heading={<>Create.<br />Execute.<br />Thrive.</>}
-          description="Accelerate your growth with data-driven strategies. Stay ahead of the competition and build long-term success."
-          illustration={innovationIllustration}
-          illustrationAlt="Innovation & Strategy illustration"
-          servicesList={innovationServices}
-          layout="image-right"
-        />
+       
 
-        <ServiceCard
-          label="Branding & Engagement"
-          heading={<>Elevate Your<br />Reach.</>}
-          description="Create a distinct brand identity that connects with your audience and leaves a lasting impression."
-          illustration={brandingIllustration}
-          illustrationAlt="Branding & Engagement illustration"
-          servicesList={brandingServices}
-          layout="image-left"
-        />
+        
 
         <ServiceCard
           label="Marketing & Advertising"

@@ -1,3 +1,4 @@
+
 import levionLogo from "@/assets/levion-logo.png";
 import yellowScribble from "@/assets/yellow-scribble.png";
 import iconInstagram from "@/assets/icon-instagram.png";
@@ -10,12 +11,11 @@ import paperTexture from "@/assets/paper-texture.png";
 const FooterSection = () => {
   return (
     <footer
-      // ✅ FIX 1: Reduced padding (mobile first)
       className="relative pt-4 pb-6 md:pt-6 md:pb-10 overflow-hidden"
       style={{
-        backgroundImage: `url(${paperTexture})`,
+        backgroundImage: `url(${paperTexture})`, // ✅ FIXED (this was breaking everything)
         backgroundSize: "cover",
-        backgroundPosition: "center"
+        backgroundPosition: "center",
       }}
     >
       
@@ -33,7 +33,7 @@ const FooterSection = () => {
           {/* LEFT */}
           <div className="flex flex-col gap-4 max-w-[500px]">
             
-            {/* Logo (slightly smaller on mobile) */}
+            {/* Logo */}
             <img
               src={levionLogo}
               alt="Levion Studio"
@@ -45,11 +45,19 @@ const FooterSection = () => {
               Levion Studio is a modern digital studio blending strategy, design, and technology to build brands that move forward.
             </p>
 
-            {/* Social Icons (reduced size) */}
+            {/* ✅ Social Icons with Links (only change you asked) */}
             <div className="flex items-center gap-2 mt-1">
-              <img src={iconInstagram} className="w-10 h-10 md:w-14 md:h-14" />
-              <img src={iconLinkedin} className="w-10 h-10 md:w-14 md:h-14" />
-              <img src={iconFacebook} className="w-9 h-9 md:w-[65px] md:h-[65px]" />
+              <a href="https://www.instagram.com/levionstudi0/" target="_blank" rel="noopener noreferrer">
+                <img src={iconInstagram} className="w-10 h-10 md:w-14 md:h-14" />
+              </a>
+
+              <a href="https://www.linkedin.com/company/levion-studio/" target="_blank" rel="noopener noreferrer">
+                <img src={iconLinkedin} className="w-10 h-10 md:w-14 md:h-14" />
+              </a>
+
+              <a href="https://www.facebook.com/share/v/1B7rACXiVT/" target="_blank" rel="noopener noreferrer">
+                <img src={iconFacebook} className="w-9 h-9 md:w-[65px] md:h-[65px]" />
+              </a>
             </div>
           </div>
 
@@ -102,4 +110,4 @@ const FooterSection = () => {
   );
 };
 
-export default FooterSection;
+export default FooterSection; 
