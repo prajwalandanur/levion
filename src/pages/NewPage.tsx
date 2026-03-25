@@ -17,15 +17,15 @@ const NewPage = () => {
           <div className="w-full md:max-w-[85%] mx-auto">
             <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed md:leading-loose text-left">
 
-              Levion Studio started with a simple realization — businesses don’t lack ideas, they lack the right execution. In a space where design, technology, and marketing often work in silos, we saw the need for something more connected. A way to bring everything together with clarity and purpose. That’s where we began.
+              Levion Studio started with a simple realization businesses don’t lack ideas, they lack the right execution. In a space where design, technology, and marketing often work in silos, we saw the need for something more connected. A way to bring everything together with clarity and purpose. That’s where we began.
 
               <br /><br />
 
-              We built Levion Studio on the belief that digital growth should be intentional, seamless, and meaningful. Every project we take on is approached as a problem to solve — not just something to deliver.
+              We built Levion Studio on the belief that digital growth should be intentional, seamless, and meaningful. Every project we take on is approached as a problem to solve not just something to deliver.
 
               <br /><br />
 
-              At the core of it all is our team — a group of creative thinkers and problem-solvers driven by curiosity. We challenge the obvious, simplify complexity, and build solutions that are both thoughtful and effective. Today, Levion Studio is more than a digital studio. We are partners in growth, helping brands move forward with clarity, purpose, and real impact.
+              At the core of it all is our team, a group of creative thinkers and problem-solvers driven by curiosity. We challenge the obvious, simplify complexity, and build solutions that are both thoughtful and effective. Today, Levion Studio is more than a digital studio. We are partners in growth, helping brands move forward with clarity, purpose, and real impact.
 
             </p>
           </div>
@@ -48,7 +48,7 @@ const NewPage = () => {
             </p>
 
             <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed md:leading-loose">
-              We believe businesses should operate with clarity, efficiency, and impact. By combining technology, design, and strategy, we help brands build strong foundations that allow them to focus on what matters most — delivering real value to their customers.
+              We believe businesses should operate with clarity, efficiency, and impact. By combining technology, design, and strategy, we help brands build strong foundations that allow them to focus on what matters most delivering real value to their customers.
             </p>
 
             <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed md:leading-loose">
@@ -79,7 +79,7 @@ const NewPage = () => {
             </p>
 
             <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed md:leading-loose">
-              We aim to be more than just a service provider — we strive to be a long-term partner in shaping and supporting the journey of the brands we work with.
+              We aim to be more than just a service provider  we strive to be a long-term partner in shaping and supporting the journey of the brands we work with.
             </p>
 
             <p className="font-['Satoshi_Variable'] font-bold text-foreground text-[16px] md:text-[20px] lg:text-[22px] leading-relaxed md:leading-loose">
